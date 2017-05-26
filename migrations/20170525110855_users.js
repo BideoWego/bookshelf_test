@@ -7,17 +7,16 @@ exports.up = function(knex, Promise) {
     t.string('lname');
     t.string('email');
 
-    // t.timestamp('created_at')
-    //   .notNullable()
-    //   .defaultTo(
-    //     knex.raw('now()')
-    //   );
-    // t.timestamp('updated_at')
-    //   .notNullable()
-    //   .defaultTo(
-    //     knex.raw('now()')
-    //   );
-    t.timestamps();
+    t.timestamp('created_at')
+      .notNullable()
+      .defaultTo(
+        knex.raw('now()')
+      );
+    t.timestamp('updated_at')
+      .notNullable()
+      .defaultTo(
+        knex.raw('now()')
+      );
   });
 };
 

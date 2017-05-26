@@ -12,27 +12,6 @@ const User = Model.extend({
 });
 
 
-const user = new User({
-  fname: 'George',
-  lname: 'Costanza',
-  email: 'george_costanza@gmail.com'
-});
-
-
-user.save()
-  .then(user => {
-    console.log(
-      user.get('fname'),
-      user.get('lname'),
-      user.get('email'),
-      user.fname,
-      user.lname,
-      user.email,
-      user.get('created_at'),
-      user.get('updated_at')
-    )
-  })
-  .catch(console.error)
-  .then(() => process.exit());
+module.exports = { User };
 
 
